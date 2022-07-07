@@ -1,0 +1,5 @@
+name: 'manny_dev'
+type: module
+description: 'my awesome module'
+core_version_requirement: ">=8"
+package: 'Custom'

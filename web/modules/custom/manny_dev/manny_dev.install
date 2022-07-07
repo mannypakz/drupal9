@@ -1,0 +1,45 @@
+<?php
+function manny_dev_schema() {
+	$schema['manny_dev'] = [
+		'description' => 'Store long url and short url',
+		'fields' => [
+			'id' => [
+				'description' => 'Primary key',
+				'type' => 'serial',
+				'unsigned' => TRUE,
+				'not null' => TRUE,
+			],
+			'nid' => [
+				'description' => 'Node id',
+				'type' => 'int',
+				'not null' => TRUE,
+				'length' => 11,
+				'default' => 0,
+			],
+			'long_url' => [
+				'description' => 'Unformatted Long URL',
+				'type' => 'text',
+				'not null' => TRUE,
+				'default' => 'default',
+				'size' => 'normal',
+			],
+			'short_url' => [
+				'description' => 'Formatted Short URL',
+				'type' => 'text',
+				'not null' => TRUE,
+				'default' => 'default',
+				'size' => 'normal'
+			],
+		],
+		'primary key' => ['id'],
+	];
+
+	return $schema;
+}
+
+/**
+ * Implements hook_uninstall()
+ */
+function your_custom_module_uninstall() {
+  \Drupal::database()->schema()->dropTable('manny_dev');
+}

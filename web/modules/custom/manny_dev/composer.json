@@ -1,0 +1,13 @@
+{
+    "name": "manny_dev",
+    "type": "drupal-module",
+    "description": "my awesome module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/manny_dev",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/manny_dev",
+        "source": "http://cgit.drupalcode.org/manny_dev",
+    },
+}

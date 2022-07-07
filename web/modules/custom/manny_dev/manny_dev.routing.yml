@@ -1,0 +1,7 @@
+manny_dev.content:
+  path: '/md/{name}'
+  defaults:
+    _controller: '\Drupal\manny_dev\Controller\DefaultController::content'
+    _title: 'Default'
+  requirements:
+    _permission: 'access content'
